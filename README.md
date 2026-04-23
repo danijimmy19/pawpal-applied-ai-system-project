@@ -1,3 +1,5 @@
+# PawPal+ AI Assistant
+
 PawPal+ AI Assistant is a rebuilt final-project version of the original **PawPal+ pet care scheduler**. The base project already managed pets, tasks, sorting, conflict checks, recurring tasks, JSON persistence, a CLI demo, and a Streamlit interface. This extension turns that scheduler into a grounded AI system with retrieval, an observable agent workflow, guardrails, and an evaluation harness.
 
 ## Why this project matters
