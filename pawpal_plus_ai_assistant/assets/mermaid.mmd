@@ -1,0 +1,210 @@
+flowchart TD
+    %% ======================================
+    %% PawPal+ AI Assistant - Unified System
+    %% ======================================
+
+    USER[User]
+
+    subgraph UI["Interface Layer"]
+        STREAMLIT[Streamlit UI]
+        CLI[CLI Interface]
+        SIDEBAR[Backend / Model Selector]
+    end
+
+    subgraph CONFIG["Configuration"]
+        ENV[.env / API Keys]
+        SETTINGS[Runtime Settings]
+    end
+
+    subgraph APP["Application / Orchestration Layer"]
+        CONTROLLER[App Controller]
+        AGENT[ReAct Agent Controller]
+        TRACE[Observable Thought / Action Trace]
+        CRITIQUE[Self-Critique]
+        CONF[Confidence Scoring]
+        JSONOUT[Structured JSON Output]
+        CAP[Iteration Cap]
+    end
+
+    subgraph SAFE["Guardrails / Reliability"]
+        VALIDATE[Input Validation]
+        INJECTION[Prompt Injection Detection]
+        MEDSAFE[Medical Safety Redirect]
+        TASKCHECK[Task Proposal Validation]
+        ERRORS[Error Handling / Fallbacks]
+    end
+
+    subgraph RETRIEVAL["Retrieval Layer"]
+        RETSEL[Retriever Selector]
+        TFIDF[TF-IDF Retriever]
+        GEMRET[Gemini Embeddings Retriever]
+        KB[Curated Pet-Care Knowledge Base]
+        LIVECTX[Live Schedule / Owner Context]
+        RETCTX[Retrieved Context]
+    end
+
+    subgraph MODELS["Generation / Reasoning Backends"]
+        MODSEL[Model Backend Selector]
+        DET[Deterministic Local Backend]
+        GEMMODEL[Gemini Model Backend]
+        OLLMODEL[Ollama Local Model Backend]
+    end
+
+    subgraph OLLAMA["Ollama Service"]
+        OLLAPI[Ollama Local API]
+        TAGS[List Installed Models]
+        PULL[Pull / Download Model]
+        CHAT[Chat / Structured Output]
+    end
+
+    subgraph GEMINI["Gemini Service"]
+        GEMAPI[Gemini API]
+        GEMEMBED[Embedding Endpoint]
+        GEMCHAT[Generation / JSON Output]
+    end
+
+    subgraph TOOLS["Agent Tools"]
+        TOOLROUTER[Tool Router]
+        TOOL1[List Tasks]
+        TOOL2[Add Task]
+        TOOL3[Check Conflicts]
+        TOOL4[Find Next Slot]
+        TOOL5[Save / Load Data]
+    end
+
+    subgraph CORE["Core Scheduling System"]
+        OWNER[Owner]
+        PET[Pet]
+        TASK[Task]
+        SCHED[Scheduler]
+        STORE[(JSON Data Store)]
+    end
+
+    subgraph TESTING["Testing / Evaluation"]
+        PYTEST[Pytest Unit Tests]
+        HARNESS[Evaluation Harness\n10+ Scenarios]
+        SUMMARY[Pass/Fail + Confidence Summary]
+    end
+
+    %% User flow
+    USER --> STREAMLIT
+    USER --> CLI
+
+    %% UI interactions
+    STREAMLIT --> SIDEBAR
+    CLI --> SETTINGS
+    SIDEBAR --> SETTINGS
+    STREAMLIT --> CONTROLLER
+    CLI --> CONTROLLER
+
+    %% Config
+    ENV --> SETTINGS
+    ENV --> GEMAPI
+    SETTINGS --> CONTROLLER
+
+    %% Controller to safety
+    CONTROLLER --> VALIDATE
+    CONTROLLER --> AGENT
+    VALIDATE --> INJECTION
+    INJECTION --> MEDSAFE
+    MEDSAFE --> TASKCHECK
+    TASKCHECK --> ERRORS
+    ERRORS --> AGENT
+
+    %% Agent internals
+    AGENT --> TRACE
+    AGENT --> CAP
+    AGENT --> RETSEL
+    AGENT --> TOOLROUTER
+    AGENT --> MODSEL
+    AGENT --> CRITIQUE
+    CRITIQUE --> CONF
+    CONF --> JSONOUT
+
+    %% Retrieval selection
+    RETSEL --> TFIDF
+    RETSEL --> GEMRET
+
+    %% TF-IDF path
+    TFIDF --> KB
+    TFIDF --> LIVECTX
+
+    %% Gemini retrieval path
+    GEMRET --> GEMEMBED
+    GEMEMBED --> GEMAPI
+    GEMRET --> KB
+    GEMRET --> LIVECTX
+
+    %% Retrieval result back
+    KB --> RETCTX
+    LIVECTX --> RETCTX
+    RETCTX --> AGENT
+
+    %% Model backend selection
+    MODSEL --> DET
+    MODSEL --> GEMMODEL
+    MODSEL --> OLLMODEL
+
+    %% Gemini model path
+    GEMMODEL --> GEMCHAT
+    GEMCHAT --> GEMAPI
+
+    %% Ollama model path
+    OLLMODEL --> OLLAPI
+    OLLAPI --> TAGS
+    OLLAPI --> PULL
+    OLLAPI --> CHAT
+
+    %% Tool routing
+    TOOLROUTER --> TOOL1
+    TOOLROUTER --> TOOL2
+    TOOLROUTER --> TOOL3
+    TOOLROUTER --> TOOL4
+    TOOLROUTER --> TOOL5
+
+    TOOL1 --> SCHED
+    TOOL2 --> SCHED
+    TOOL3 --> SCHED
+    TOOL4 --> SCHED
+    TOOL5 --> STORE
+
+    %% Scheduler core
+    SCHED --> OWNER
+    OWNER --> PET
+    PET --> TASK
+    STORE <--> OWNER
+    LIVECTX --> SCHED
+
+    %% Outputs back to UI
+    JSONOUT --> CONTROLLER
+    TRACE --> CONTROLLER
+    CONTROLLER --> STREAMLIT
+    CONTROLLER --> CLI
+
+    %% Testing / evaluation
+    PYTEST --> SCHED
+    PYTEST --> AGENT
+    HARNESS --> CONTROLLER
+    HARNESS --> SUMMARY
+    PYTEST --> SUMMARY
+
+    %% Styling
+    classDef ui fill:#E8F0FE,stroke:#1A73E8,stroke-width:1px,color:#000;
+    classDef config fill:#FFF8E1,stroke:#F9A825,stroke-width:1px,color:#000;
+    classDef app fill:#E6F4EA,stroke:#188038,stroke-width:1px,color:#000;
+    classDef safe fill:#FDE7E9,stroke:#D93025,stroke-width:1px,color:#000;
+    classDef retrieval fill:#FFF3E0,stroke:#FB8C00,stroke-width:1px,color:#000;
+    classDef models fill:#F3E8FD,stroke:#9334E6,stroke-width:1px,color:#000;
+    classDef tools fill:#EDE7F6,stroke:#673AB7,stroke-width:1px,color:#000;
+    classDef core fill:#E0F7FA,stroke:#00838F,stroke-width:1px,color:#000;
+    classDef test fill:#F1F3F4,stroke:#5F6368,stroke-width:1px,color:#000;
+
+    class USER,STREAMLIT,CLI,SIDEBAR ui;
+    class ENV,SETTINGS config;
+    class CONTROLLER,AGENT,TRACE,CRITIQUE,CONF,JSONOUT,CAP app;
+    class VALIDATE,INJECTION,MEDSAFE,TASKCHECK,ERRORS safe;
+    class RETSEL,TFIDF,GEMRET,KB,LIVECTX,RETCTX retrieval;
+    class MODSEL,DET,GEMMODEL,OLLMODEL,OLLAPI,TAGS,PULL,CHAT,GEMAPI,GEMEMBED,GEMCHAT models;
+    class TOOLROUTER,TOOL1,TOOL2,TOOL3,TOOL4,TOOL5 tools;
+    class OWNER,PET,TASK,SCHED,STORE core;
+    class PYTEST,HARNESS,SUMMARY test;

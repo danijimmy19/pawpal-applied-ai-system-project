@@ -1,0 +1,104 @@
+{
+  "name": "Belem",
+  "email": "belem@example.com",
+  "preferences": {
+    "planning_window_start": 8,
+    "planning_window_end": 20
+  },
+  "pets": [
+    {
+      "name": "Mochi",
+      "species": "Dog",
+      "age": 3,
+      "notes": "Loves morning walks and puzzle toys.",
+      "tasks": [
+        {
+          "description": "Breakfast",
+          "due_date": "2026-04-23",
+          "due_time": "08:00",
+          "frequency": "daily",
+          "priority": "high",
+          "completed": false,
+          "duration_minutes": 10,
+          "task_type": "feeding"
+        },
+        {
+          "description": "Morning walk",
+          "due_date": "2026-04-23",
+          "due_time": "07:00",
+          "frequency": "daily",
+          "priority": "high",
+          "completed": false,
+          "duration_minutes": 30,
+          "task_type": "exercise"
+        },
+        {
+          "description": "Schedule a 30 minute morning walk for Mochi tomorrow at 7am",
+          "due_date": "2026-04-24",
+          "due_time": "07:00",
+          "frequency": "daily",
+          "priority": "high",
+          "completed": false,
+          "duration_minutes": 30,
+          "task_type": "exercise"
+        }
+      ]
+    },
+    {
+      "name": "Simba",
+      "species": "Cat",
+      "age": 5,
+      "notes": "Gets evening medication and likes short play sessions.",
+      "tasks": [
+        {
+          "description": "Medication",
+          "due_date": "2026-04-23",
+          "due_time": "19:00",
+          "frequency": "daily",
+          "priority": "high",
+          "completed": false,
+          "duration_minutes": 10,
+          "task_type": "medical"
+        },
+        {
+          "description": "Dinner",
+          "due_date": "2026-04-23",
+          "due_time": "18:00",
+          "frequency": "daily",
+          "priority": "medium",
+          "completed": false,
+          "duration_minutes": 10,
+          "task_type": "feeding"
+        }
+      ]
+    },
+    {
+      "name": "Jackie",
+      "species": "Dog",
+      "age": 4,
+      "notes": "Needs structured exercise and grooming reminders.",
+      "tasks": [
+        {
+          "description": "Exercise",
+          "due_date": "2026-04-23",
+          "due_time": "09:00",
+          "frequency": "daily",
+          "priority": "medium",
+          "completed": false,
+          "duration_minutes": 30,
+          "task_type": "exercise"
+        },
+        {
+          "description": "Grooming",
+          "due_date": "2026-04-23",
+          "due_time": "09:20",
+          "frequency": "once",
+          "priority": "high",
+          "completed": false,
+          "duration_minutes": 30,
+          "task_type": "grooming"
+        }
+      ]
+    }
+  ]
+}
