@@ -176,12 +176,14 @@ If you type an Ollama model name that is not installed yet, click **Download / p
 ```bash
 PYTHONPATH=src python -m pytest
 ```
+![pytest-output](pawpal_plus_ai_assistant/assets/screenshots/pytest-cases.png)
 
 ### 8. Run the evaluation harness
 
 ```bash
 PYTHONPATH=src python eval/run_evaluation.py
 ```
+![run-evaluations](pawpal_plus_ai_assistant/assets/screenshots/evaluateions.png)
 
 ## Sample interactions
 
@@ -196,6 +198,10 @@ Behavior:
 - retrieves exercise/schedule context
 - creates a structured task proposal
 - waits for approval before modifying the schedule
+
+![nlp-taskplanning](pawpal_plus_ai_assistant/assets/screenshots/add-task-1.png)
+![nlp-taskplanning](pawpal_plus_ai_assistant/assets/screenshots/add-task-2.png)
+![nlp-taskplanning](pawpal_plus_ai_assistant/assets/screenshots/add-task-3.png)
 
 ### Example 2 — schedule review
 Input:
