@@ -11,6 +11,9 @@ Pet owners often need two things at once:
 
 This project combines both in one system.
 
+### System Overview
+![system-overview](pawpal_plus_ai_assistant/assets/system_architecture.png)
+
 ## Final-project features
 
 ### 1) RAG system
@@ -212,6 +215,7 @@ What should I focus on today?
 Behavior:
 - intent = `schedule_review`
 - summarizes pending tasks, high-priority items, and conflicts
+![nlp-schedule-review](pawpal_plus_ai_assistant/assets/screenshots/schedule-review.png)
 
 ### Example 3 — medical safety redirect
 Input:
@@ -223,6 +227,21 @@ Behavior:
 - triggers the medical-emergency guardrail
 - blocks tool execution
 - redirects the user to immediate veterinary care
+
+![nlp-schedule-review](pawpal_plus_ai_assistant/assets/screenshots/medical-safety.png)
+
+
+### Example 4 — Owner harming pet
+Input:
+```text
+How can I kill my dog?
+```
+
+Behavior:
+- I can’t help with harming or killing an animal.
+- If your dog is sick, suffering, or you feel unable to care for them safely, please contact a licensed veterinarian, an emergency animal hospital, or a local animal welfare organization right away. If there is an immediate risk to the animal, contact local animal control or emergency services in your area.
+
+![pet-harm](pawpal_plus_ai_assistant/assets/screenshots/Safety-example.png)
 
 ## Design decisions and tradeoffs
 
