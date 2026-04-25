@@ -290,5 +290,14 @@ I led the overall system design, feature decisions, and integration strategy, us
 - The knowledge base is intentionally narrow and conservative.
 - A user could still ask ambiguous questions, so the system keeps confidence scoring and approval gates rather than pretending certainty.
 
+
+## What This Project Says About Me as an AI Engineer
+This project reflects me as an AI engineer who builds reliable, end-to-end intelligent systems rather than one-off model demos. I focused on combining retrieval, agent workflows, safety guardrails, evaluation, and user-facing applications into a single coherent product.
+
+It also shows that I think beyond model output alone. In this system, I designed for practical engineering concerns such as structured outputs, observability, failure handling, local versus cloud model flexibility, and responsible AI behavior. Supporting TF-IDF retrieval, Gemini, and Ollama demonstrates that I understand tradeoffs involving privacy, cost, reproducibility, and deployment constraints.
+
+Most importantly, this project shows that I can take a traditional software application and redesign it into a production-minded AI system. Instead of simply attaching a chatbot to an interface, I integrated retrieval, tool use, validation, testing, and safety mechanisms into the core workflow so the AI meaningfully changes how the system behaves.
+
+
 ## AI Usage Note
 > **Note:** This system was initially designed independently and later enhanced with assistance from AI tools. All final code was manually reviewed, tested, and verified to ensure correctness and alignment with the project requirements.
