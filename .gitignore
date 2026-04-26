@@ -6,3 +6,4 @@ __pycache__/
 .env
 .env.example.DS_Store
 assets/video_files/
+.DS_Store
