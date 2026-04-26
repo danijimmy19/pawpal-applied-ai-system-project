@@ -4,4 +4,5 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 .env
-.env.example
+.env.example.DS_Store
+assets/video_files/
