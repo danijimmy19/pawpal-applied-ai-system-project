@@ -1,6 +1,6 @@
 {
-  "name": "Belem",
-  "email": "belem@example.com",
+  "name": "Jonny Depp",
+  "email": "jonny@example.com",
   "preferences": {
     "planning_window_start": 8,
     "planning_window_end": 20
@@ -18,7 +18,7 @@
           "due_time": "08:00",
           "frequency": "daily",
           "priority": "high",
-          "completed": false,
+          "completed": true,
           "duration_minutes": 10,
           "task_type": "feeding"
         },
@@ -28,7 +28,7 @@
           "due_time": "07:00",
           "frequency": "daily",
           "priority": "high",
-          "completed": false,
+          "completed": true,
           "duration_minutes": 30,
           "task_type": "exercise"
         },
@@ -41,6 +41,56 @@
           "completed": false,
           "duration_minutes": 30,
           "task_type": "exercise"
+        },
+        {
+          "description": "Breakfast",
+          "due_date": "2026-04-24",
+          "due_time": "08:00",
+          "frequency": "daily",
+          "priority": "high",
+          "completed": true,
+          "duration_minutes": 10,
+          "task_type": "feeding"
+        },
+        {
+          "description": "Morning walk",
+          "due_date": "2026-04-24",
+          "due_time": "07:00",
+          "frequency": "daily",
+          "priority": "high",
+          "completed": false,
+          "duration_minutes": 30,
+          "task_type": "exercise"
+        },
+        {
+          "description": "Breakfast",
+          "due_date": "2026-04-25",
+          "due_time": "08:00",
+          "frequency": "daily",
+          "priority": "high",
+          "completed": false,
+          "duration_minutes": 10,
+          "task_type": "feeding"
+        },
+        {
+          "description": "Litter Cleaning",
+          "due_date": "2026-04-26",
+          "due_time": "18:00",
+          "frequency": "daily",
+          "priority": "medium",
+          "completed": false,
+          "duration_minutes": 15,
+          "task_type": "general"
+        },
+        {
+          "description": "Vet Checkup",
+          "due_date": "2026-04-28",
+          "due_time": "10:16",
+          "frequency": "once",
+          "priority": "high",
+          "completed": false,
+          "duration_minutes": 45,
+          "task_type": "medical"
         }
       ]
     },
@@ -66,6 +116,16 @@
           "due_time": "18:00",
           "frequency": "daily",
           "priority": "medium",
+          "completed": true,
+          "duration_minutes": 10,
+          "task_type": "feeding"
+        },
+        {
+          "description": "Dinner",
+          "due_date": "2026-04-24",
+          "due_time": "18:00",
+          "frequency": "daily",
+          "priority": "medium",
           "completed": false,
           "duration_minutes": 10,
           "task_type": "feeding"
@@ -84,7 +144,7 @@
           "due_time": "09:00",
           "frequency": "daily",
           "priority": "medium",
-          "completed": false,
+          "completed": true,
           "duration_minutes": 30,
           "task_type": "exercise"
         },
@@ -94,8 +154,188 @@
           "due_time": "09:20",
           "frequency": "once",
           "priority": "high",
+          "completed": true,
+          "duration_minutes": 30,
+          "task_type": "grooming"
+        },
+        {
+          "description": "Exercise",
+          "due_date": "2026-04-24",
+          "due_time": "09:00",
+          "frequency": "daily",
+          "priority": "medium",
           "completed": false,
           "duration_minutes": 30,
+          "task_type": "exercise"
+        }
+      ]
+    },
+    {
+      "name": "Bruno",
+      "species": "Dog",
+      "age": 3,
+      "notes": "",
+      "tasks": [
+        {
+          "description": "Walk",
+          "due_date": "2026-04-26",
+          "due_time": "09:38",
+          "frequency": "daily",
+          "priority": "medium",
+          "completed": false,
+          "duration_minutes": 30,
+          "task_type": "exercise"
+        },
+        {
+          "description": "30 Minute Grooming Appointment",
+          "due_date": "2026-04-27",
+          "due_time": "09:00",
+          "frequency": "once",
+          "priority": "medium",
+          "completed": false,
+          "duration_minutes": 30,
+          "task_type": "appointment"
+        }
+      ]
+    },
+    {
+      "name": "Brambo",
+      "species": "Dog",
+      "age": 3,
+      "notes": "",
+      "tasks": [
+        {
+          "description": "Vet Appointment",
+          "due_date": "2026-04-26",
+          "due_time": "09:41",
+          "frequency": "once",
+          "priority": "high",
+          "completed": false,
+          "duration_minutes": 30,
+          "task_type": "medical"
+        },
+        {
+          "description": "45 Minute Grooming Appointment",
+          "due_date": "2026-04-27",
+          "due_time": "12:00",
+          "frequency": "once",
+          "priority": "medium",
+          "completed": false,
+          "duration_minutes": 45,
+          "task_type": "appointment"
+        }
+      ]
+    },
+    {
+      "name": "Nova",
+      "species": "Dog",
+      "age": 1,
+      "notes": "",
+      "tasks": [
+        {
+          "description": "Morning Walk",
+          "due_date": "2026-04-26",
+          "due_time": "07:00",
+          "frequency": "daily",
+          "priority": "high",
+          "completed": false,
+          "duration_minutes": 30,
+          "task_type": "general"
+        },
+        {
+          "description": "Evening feeding",
+          "due_date": "2026-04-26",
+          "due_time": "10:11",
+          "frequency": "daily",
+          "priority": "high",
+          "completed": false,
+          "duration_minutes": 15,
+          "task_type": "feeding"
+        },
+        {
+          "description": "Grooming Appointment",
+          "due_date": "2026-04-27",
+          "due_time": "10:12",
+          "frequency": "once",
+          "priority": "medium",
+          "completed": false,
+          "duration_minutes": 60,
+          "task_type": "grooming"
+        }
+      ]
+    },
+    {
+      "name": "Miso",
+      "species": "Cat",
+      "age": 3,
+      "notes": "",
+      "tasks": [
+        {
+          "description": "Medication",
+          "due_date": "2026-04-26",
+          "due_time": "10:15",
+          "frequency": "daily",
+          "priority": "high",
+          "completed": false,
+          "duration_minutes": 10,
+          "task_type": "medical"
+        },
+        {
+          "description": "Schedule a 20 minute play session for Miso every day at 6:30 PM",
+          "due_date": "2026-04-26",
+          "due_time": "18:30",
+          "frequency": "daily",
+          "priority": "medium",
+          "completed": false,
+          "duration_minutes": 20,
+          "task_type": "general"
+        }
+      ]
+    },
+    {
+      "name": "Clover",
+      "species": "Other",
+      "age": 5,
+      "notes": "",
+      "tasks": [
+        {
+          "description": "Hay Refill",
+          "due_date": "2026-04-26",
+          "due_time": "10:17",
+          "frequency": "daily",
+          "priority": "medium",
+          "completed": false,
+          "duration_minutes": 10,
+          "task_type": "general"
+        },
+        {
+          "description": "Cage Cleaning",
+          "due_date": "2026-04-26",
+          "due_time": "11:00",
+          "frequency": "weekly",
+          "priority": "medium",
+          "completed": false,
+          "duration_minutes": 30,
+          "task_type": "general"
+        },
+        {
+          "description": "Nail trim",
+          "due_date": "2026-05-04",
+          "due_time": "10:18",
+          "frequency": "once",
+          "priority": "low",
+          "completed": false,
+          "duration_minutes": 20,
+          "task_type": "grooming"
+        },
+        {
+          "description": "Brushing session",
+          "due_date": "2026-04-28",
+          "due_time": "19:00",
+          "frequency": "weekly",
+          "priority": "medium",
+          "completed": false,
+          "duration_minutes": 15,
           "task_type": "grooming"
         }
       ]
