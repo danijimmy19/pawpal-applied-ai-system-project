@@ -299,5 +299,11 @@ It also shows that I think beyond model output alone. In this system, I designed
 Most importantly, this project shows that I can take a traditional software application and redesign it into a production-minded AI system. Instead of simply attaching a chatbot to an interface, I integrated retrieval, tool use, validation, testing, and safety mechanisms into the core workflow so the AI meaningfully changes how the system behaves.
 
 
+## Video Walkthrough
+Video Link: [Video Link](https://drive.google.com/file/d/13RoqoQmmo3jEj64lpLkWXBJyYrfAgxS-/view?usp=sharing)
+
+This video demonstrates the PawPal+ AI Assistant running end-to-end. It includes example inputs that show task scheduling, AI retrieval and reasoning behavior, and reliability features such as safety guardrails and clear system outputs.
+
+
 ## AI Usage Note
 > **Note:** This system was initially designed independently and later enhanced with assistance from AI tools. All final code was manually reviewed, tested, and verified to ensure correctness and alignment with the project requirements.

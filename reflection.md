@@ -5,7 +5,7 @@
 My base project was **PawPal+**, a Python pet-care scheduler with four core ideas:
 - `Owner`, `Pet`, `Task`, and `Scheduler` classes
 - multi-pet task management
-- sorting, filtering, recurrence, and conflict checks
+- sorting, filteœring, recurrence, and conflict checks
 - a CLI and Streamlit interface
 
 For the final project, I extended that scheduler into **PawPal+ AI Assistant**, which adds retrieval-augmented guidance, an observable agent workflow, guardrails, and an evaluation harness.
