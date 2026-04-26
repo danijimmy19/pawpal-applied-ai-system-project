@@ -1,2 +1,8 @@
+__pycache__/
+.venv/
+.venv_new/
+.pytest_cache/
+.DS_Store
 .env
-evn.example
+.env.example.DS_Store
+assets/video_files/
